@@ -295,6 +295,7 @@
         else if (sRow == 1)
         {
             [self presentPointsGetterController];
+            [MobClick event:@"UEID_GET_POINTS_ACTIVE"];
         }
     }
     else 

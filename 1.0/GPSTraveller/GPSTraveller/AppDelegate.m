@@ -27,7 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [YouMiConfig launchWithAppID: SECRET_ID_YOUMI appSecret: SECRET_KEY_YOUMI];
-    [YouMiConfig setUseInAppStore:YES];
+    [YouMiConfig setUseInAppStore:NO];//must be NO for jailbroken device
     [YouMiConfig setIsTesting:NO];
 
     

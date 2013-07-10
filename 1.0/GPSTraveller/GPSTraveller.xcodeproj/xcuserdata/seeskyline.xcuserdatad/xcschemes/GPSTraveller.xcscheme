@@ -80,7 +80,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Archive4Youmi"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

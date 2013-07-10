@@ -34,8 +34,7 @@
 {
     mCoordinate = aCoordinate;
     
-    NSString* sCoordinateInfo = [NSString stringWithFormat:@"%@：%.4f \t %@：%.4f",NSLocalizedString(@"Longitude", nil), self.coordinate.longitude, NSLocalizedString(@"Latitude", nil), self.coordinate.latitude];
-    self.subtitle = sCoordinateInfo;
+    self.subtitle = NSLocalizedString(@"Location info loading...", nil);
     
     CLLocation* sLocation = [[CLLocation alloc] initWithLatitude:mCoordinate.latitude longitude:mCoordinate.longitude];
     
@@ -58,5 +57,20 @@
 {
     return self.mCoordinate;
 }
+
+- (NSString*) getDesp;
+{
+    if (!self.subtitle
+        || [self.subtitle isEqualToString:NSLocalizedString(@"Location info loading...", nil)])
+    {
+        NSString* sCoordinateInfo = [NSString stringWithFormat:@"%@：%.4f \t %@：%.4f",NSLocalizedString(@"Longitude", nil),self.mCoordinate.longitude, NSLocalizedString(@"Latitude", nil), self.mCoordinate.latitude];
+        return sCoordinateInfo;
+    }
+    else
+    {
+        return self.subtitle;
+    }
+}
+
 
 @end

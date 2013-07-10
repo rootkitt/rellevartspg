@@ -24,17 +24,20 @@
     NSMutableArray* mFavoriteItems;
     NSMutableArray* mHotItems;
     UITableView* mTableView;
+    BOOL mIsLoadingHots;
 }
 
 @property (nonatomic, retain) NSMutableArray* mFavoriteItems;
 @property (nonatomic, retain) NSMutableArray* mHotItems;
 @property (nonatomic, retain) UITableView* mTableView;
+@property (nonatomic, assign) BOOL mIsLoadingHots;
 @end
 
 @implementation POIsViewController
 @synthesize mFavoriteItems;
 @synthesize mHotItems;
 @synthesize mTableView;
+@synthesize mIsLoadingHots;
 
 + (UIViewController*) shared
 {
@@ -53,6 +56,7 @@
         self.title = NSLocalizedString(@"POIs", nil);
         self.mFavoriteItems = [NSMutableArray array];
         self.mHotItems = [NSMutableArray array];
+        self.mIsLoadingHots = NO;
     }
     return self;
 }
@@ -75,6 +79,7 @@
     sTableView.dataSource = self;
     sTableView.delegate = self;
     sTableView.rowHeight = 65;
+    sTableView.bounces = NO;
     self.mTableView = sTableView;
     [self.view addSubview:sTableView];
     
@@ -99,7 +104,8 @@
     [super viewWillAppear:animated];
     
     [self refreshFavorites];
-    if (self.mHotItems.count <= 0)
+    if (!self.mIsLoadingHots
+        &&self.mHotItems.count <= 0)
     {
         [self loadHotItems];
     }
@@ -119,6 +125,8 @@
 
 - (void) loadHotItems
 {
+    self.mIsLoadingHots = YES;
+    
     NSString* sURLStr = URL_GET_HOT_POIS;
     NSURL *url = [NSURL MyURLWithString: sURLStr];
     
@@ -172,10 +180,13 @@
         [sHotPOI release];        
     }
     [self.mTableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationNone];
+    
+    self.mIsLoadingHots = NO;
 }
 
 - (void) loadFailed:(NSError*)aError
-{    
+{
+    self.mIsLoadingHots = NO;
     return;
 }
 
@@ -330,7 +341,18 @@
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    if (indexPath.section == 0)
+    {
+        return YES;
+    }
+    else if (indexPath.section == 1)
+    {
+        return NO;
+    }
+    else
+    {
+        return NO;       
+    }
 }
 
 

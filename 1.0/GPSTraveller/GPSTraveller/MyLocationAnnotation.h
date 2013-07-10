@@ -14,4 +14,8 @@
 
 
 - (id) initWithTitle:(NSString*)aTitle;
+
+- (NSString*) getDesp;
+
+
 @end

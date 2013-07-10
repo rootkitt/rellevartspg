@@ -75,6 +75,8 @@
 		1426C1DF1785C62600AA38B3 /* gps.db in Resources */ = {isa = PBXBuildFile; fileRef = 1426C1D71785C62600AA38B3 /* gps.db */; };
 		1426C1E01785C62600AA38B3 /* CSqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1426C1DA1785C62600AA38B3 /* CSqlite.m */; };
 		1426C1E41785C67C00AA38B3 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1426C1E31785C67C00AA38B3 /* libsqlite3.0.dylib */; };
+		14279A0E178C401100E2570C /* setting-position.png in Resources */ = {isa = PBXBuildFile; fileRef = 14279A0C178C401100E2570C /* setting-position.png */; };
+		14279A0F178C401100E2570C /* setting-position2.png in Resources */ = {isa = PBXBuildFile; fileRef = 14279A0D178C401100E2570C /* setting-position2.png */; };
 		14385B0917886E3A00C1FD9D /* favorite_selected24.png in Resources */ = {isa = PBXBuildFile; fileRef = 14385B0717886E3A00C1FD9D /* favorite_selected24.png */; };
 		14385B0A17886E3A00C1FD9D /* favorite_selected24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 14385B0817886E3A00C1FD9D /* favorite_selected24@2x.png */; };
 		14385B0D1789134300C1FD9D /* plane16.png in Resources */ = {isa = PBXBuildFile; fileRef = 14385B0B1789134300C1FD9D /* plane16.png */; };
@@ -265,6 +267,8 @@
 		1426C1DD1785C62600AA38B3 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		1426C1DE1785C62600AA38B3 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
 		1426C1E31785C67C00AA38B3 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		14279A0C178C401100E2570C /* setting-position.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-position.png"; sourceTree = "<group>"; };
+		14279A0D178C401100E2570C /* setting-position2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting-position2.png"; sourceTree = "<group>"; };
 		14385B0717886E3A00C1FD9D /* favorite_selected24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite_selected24.png; sourceTree = "<group>"; };
 		14385B0817886E3A00C1FD9D /* favorite_selected24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "favorite_selected24@2x.png"; sourceTree = "<group>"; };
 		14385B0B1789134300C1FD9D /* plane16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane16.png; sourceTree = "<group>"; };
@@ -705,6 +709,8 @@
 			children = (
 				14385B18178988BA00C1FD9D /* start.wav */,
 				14385B1417897C3C00C1FD9D /* Instructions.html */,
+				14279A0C178C401100E2570C /* setting-position.png */,
+				14279A0D178C401100E2570C /* setting-position2.png */,
 			);
 			path = files;
 			sourceTree = "<group>";
@@ -1069,6 +1075,8 @@
 				14F3AD03178A89B300AC266B /* Icon.png in Resources */,
 				14F3AD05178A89BA00AC266B /* Icon@2x.png in Resources */,
 				14867FE7178BB39F00DA5D88 /* GPSTravellerTweak.plist in Resources */,
+				14279A0E178C401100E2570C /* setting-position.png in Resources */,
+				14279A0F178C401100E2570C /* setting-position2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1297,7 +1305,7 @@
 				WRAPPER_EXTENSION = app;
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 192.168.0.109;
+				iOSOpenDevDevice = 192.168.0.119;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
@@ -1322,13 +1330,71 @@
 				WRAPPER_EXTENSION = app;
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
-				iOSOpenDevDevice = 192.168.0.109;
+				iOSOpenDevDevice = 192.168.0.119;
 				iOSOpenDevInstallOnAnyBuild = NO;
 				iOSOpenDevInstallOnProfiling = YES;
 				iOSOpenDevRespringOnInstall = YES;
 				iOSOpenDevUsePackageVersionPList = NO;
 			};
 			name = Release;
+		};
+		1479BE8A178BF2C8008EF876 /* Archive4Youmi */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = armv7;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = " /opt/iOSOpenDev";
+			};
+			name = Archive4Youmi;
+		};
+		1479BE8B178BF2C8008EF876 /* Archive4Youmi */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sheng Wen (QM833BVUC5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sheng Wen (QM833BVUC5)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GPSTraveller/GPSTraveller-Prefix.pch";
+				INFOPLIST_FILE = "GPSTraveller/GPSTraveller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/GPSTraveller\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "FBC1A790-03F5-446A-9A3E-DD4C69318843";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FBC1A790-03F5-446A-9A3E-DD4C69318843";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = 192.168.0.119;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = NO;
+			};
+			name = Archive4Youmi;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1338,6 +1404,7 @@
 			buildConfigurations = (
 				1422A122170AA799003113BF /* Debug */,
 				1422A123170AA799003113BF /* Release */,
+				1479BE8A178BF2C8008EF876 /* Archive4Youmi */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1347,6 +1414,7 @@
 			buildConfigurations = (
 				1422A125170AA799003113BF /* Debug */,
 				1422A126170AA799003113BF /* Release */,
+				1479BE8B178BF2C8008EF876 /* Archive4Youmi */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

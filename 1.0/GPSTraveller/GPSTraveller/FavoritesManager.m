@@ -55,7 +55,9 @@ static FavoritesManager* S_FavoritesManager = nil;
         
         NSUserDefaults* sDefaults = [NSUserDefaults standardUserDefaults];
         NSArray* sArchivedFavorites = [sDefaults arrayForKey:DEFUALTS_KEY_FAVORITES];
-        if (sArchivedFavorites.count > 0)
+        //on my iPad, it crashes if !sArchivedFavorites condition is absent
+        if (!sArchivedFavorites
+            && sArchivedFavorites.count > 0)
         {
             NSLog(@"some favorites found!");
             [self.mFavorites addObjectsFromArray:[self unarchiveFavorites:sArchivedFavorites]];
@@ -123,7 +125,8 @@ static FavoritesManager* S_FavoritesManager = nil;
         return NO;
     }
     
-    if (self.mFavorites.count >= MAX_FAVORITES)
+    if (self.mFavorites
+        && self.mFavorites.count >= MAX_FAVORITES)
     {
         [[SharedStates getInstance] showNotice:[NSString stringWithFormat:NSLocalizedString(@"You can collect locations not more than %d", nil), MAX_FAVORITES]];
         return NO;

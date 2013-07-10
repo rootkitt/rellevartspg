@@ -104,7 +104,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "587"
          endingLineNumber = "587"
-         landmarkName = "-showDeviceLocationView"
+         landmarkName = "-showDeviceLocationViewWithAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -117,7 +117,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "744"
          endingLineNumber = "744"
-         landmarkName = "-favoriteButtonClicked:"
+         landmarkName = "-mapView:viewForAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -156,7 +156,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "749"
          endingLineNumber = "749"
-         landmarkName = "-favoriteButtonClicked:"
+         landmarkName = "-mapView:viewForAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -164,11 +164,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/FavoritesManager.m"
-         timestampString = "394681390.432492"
+         timestampString = "395063978.75923"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "64"
-         endingLineNumber = "64"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-readStoredFavoritesIfNeeded"
          landmarkType = "5">
       </FileBreakpoint>
@@ -234,7 +234,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "361"
          endingLineNumber = "361"
-         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -268,11 +268,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/FavoritesManager.m"
-         timestampString = "394780055.378034"
+         timestampString = "395063978.75923"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "65"
-         endingLineNumber = "65"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
          landmarkName = "-readStoredFavoritesIfNeeded"
          landmarkType = "5">
       </FileBreakpoint>
@@ -286,7 +286,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "487"
          endingLineNumber = "487"
-         landmarkName = "-alertView:clickedButtonAtIndex:"
+         landmarkName = "-startTraveling"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -294,11 +294,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/FavoritesManager.m"
-         timestampString = "394816787.287302"
+         timestampString = "395063978.75923"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "126"
-         endingLineNumber = "126"
+         startingLineNumber = "128"
+         endingLineNumber = "128"
          landmarkName = "-addFavorite:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -338,7 +338,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "413"
          endingLineNumber = "413"
-         landmarkName = "-startOrStopTraveling"
+         landmarkName = "-presentAboutController"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -351,7 +351,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "782"
          endingLineNumber = "782"
-         landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+         landmarkName = "-mapView:viewForOverlay:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

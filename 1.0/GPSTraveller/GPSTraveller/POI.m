@@ -69,7 +69,10 @@
     FavoritePOI* sLocationRecord = [[[FavoritePOI alloc] init] autorelease];
     
     sLocationRecord.mRecordDate = [NSDate date];
-    sLocationRecord.mGeoInfo = aAnnotation.subtitle;
+    
+    
+
+    sLocationRecord.mGeoInfo = [aAnnotation getDesp];
     
 //    CLLocationCoordinate2D sTrueCoordinate = [[MainViewController shared] adjustLocationCoordinate:aAnnotation.mCoordinate Reverse:YES];
     CLLocationCoordinate2D sTrueCoordinate = [[MarsCoordinator shared] getRealCoordinateFromMarsCoordinate:aAnnotation.mCoordinate];

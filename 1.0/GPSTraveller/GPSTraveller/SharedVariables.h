@@ -15,13 +15,14 @@
 
 #define WEIPHONE
 
-
 #ifdef DEBUG
 #define CHANNEL_ID     @"test"
 #elif defined(APPSTORE)
 #define CHANNEL_ID @"appstore"
 #elif defined(WEIPHONE)
 #define CHANNEL_ID @"weiphone"
+#elif defined(_178)
+#define CHANNEL_ID @"178"
 #elif defined(ZHUSHOU91)
 #define CHANNEL_ID @"91"
 #elif defined(TONGBU)

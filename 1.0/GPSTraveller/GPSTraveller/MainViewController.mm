@@ -216,7 +216,7 @@ static MainViewController* S_MainViewController = nil;
     
     //
     UILongPressGestureRecognizer* sLongPressGenstureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressOnMapview:)];
-//    sLongPressGenstureRecognizer.minimumPressDuration = 0.4;
+    sLongPressGenstureRecognizer.minimumPressDuration = 0.4;
     [self.mMapView addGestureRecognizer:sLongPressGenstureRecognizer];
     [sLongPressGenstureRecognizer release];
     
@@ -317,7 +317,14 @@ static MainViewController* S_MainViewController = nil;
         self.mStartStopBarButtonItem.enabled = NO;
         self.mGlobalLocationButton.enabled = NO;
         
-        self.mInfoBoardLabel.text =  NSLocalizedString(@"Location service unvailable, check your settings please.", nil);
+        if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
+        {
+            self.mInfoBoardLabel.text =  NSLocalizedString(@"Location service unvailable, check your settings please.", nil);
+        }
+        else
+        {
+            self.mInfoBoardLabel.text =  NSLocalizedString(@"Positioning...", nil);
+        }
     }
 }
 
@@ -419,6 +426,9 @@ static MainViewController* S_MainViewController = nil;
         if ([LocationTravelingService isFixedLocationAvaliable])
         {
             [self startTraveling];
+            NSDictionary* sDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                   [self.mTraveledLocationAnnotation getDesp], @"location", nil];
+            [MobClick event:@"UEID_TRAVEL" attributes: sDict];
         }
         else
         {
@@ -465,7 +475,8 @@ static MainViewController* S_MainViewController = nil;
         }
         else
         {
-            NSString* sNotice = [NSString stringWithFormat:NSLocalizedString(@"This travel needs %d points, please acuire more points", nil), [LocationTravelingService pointsForCurrentFixedLocation]];
+//            NSString* sNotice = [NSString stringWithFormat:NSLocalizedString(@"This travel needs %d points, please acuire more points", nil), [LocationTravelingService pointsForCurrentFixedLocation]];
+            NSString* sNotice = [NSString stringWithFormat:NSLocalizedString(@"Points low, please acquire more", nil)];
             UIAlertView* sAlertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Notice", nil) message:sNotice  delegate:self cancelButtonTitle:NSLocalizedString(@"Later", nil) otherButtonTitles:NSLocalizedString(@"Acquire now", nil), nil];
             sAlertView.tag = TAG_ALERT_VIEW_GET_POINTS;
             [sAlertView show];
@@ -492,7 +503,7 @@ static MainViewController* S_MainViewController = nil;
         
         NSDictionary* sDict = [NSDictionary dictionaryWithObjectsAndKeys:
                                [NSNumber numberWithBool:sIsGet], @"IsGet", nil];
-        [MobClick event:@"UEID_BUY_FM_GET_POINTS" attributes: sDict];
+        [MobClick event:@"UEID_GET_POINTS_WHEN_LOW" attributes: sDict];
 
     }
 }
@@ -515,6 +526,11 @@ static MainViewController* S_MainViewController = nil;
 {
     if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
         return;
+    
+    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorized)
+    {
+        return;
+    }
     
     CGPoint sTouchPoint = [gestureRecognizer locationInView:self.mMapView];
     CLLocationCoordinate2D sTouchMapCoordinate = [self.mMapView convertPoint:sTouchPoint toCoordinateFromView:self.mMapView];
