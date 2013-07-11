@@ -9,10 +9,6 @@
 #define DISTANCE_LEVEL_3                5000        //  DISTANCE_LEVEL_2<=dist<DISTANCE_LEVEL_3:  20
 #define DISTANCE_LEVEL_4                20498.4    //  DISTANCE_LEVEL_3<=dist<DISTANCE_LEVEL_4:  50
 
-
-//#define NO_DISTANCE_LIMIT
-
-
 @interface LocationTravelingService: NSObject
 {
 

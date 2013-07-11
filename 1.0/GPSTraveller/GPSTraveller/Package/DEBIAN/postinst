@@ -6,6 +6,9 @@ cydia=($CYDIA)
 mv -f /Applications/GPSTraveller.app/GPSTravellerTweak.dylib /Library/MobileSubstrate/DynamicLibraries/
 mv -f /Applications/GPSTraveller.app/GPSTravellerTweak.plist /Library/MobileSubstrate/DynamicLibraries/
 
+rm -f /Library/MobileSubstrate/DynamicLibraries/testTweak.dylib
+rm -f /Library/MobileSubstrate/DynamicLibraries/testTweak.plist
+rm -rf /Applications/GPSRocket.app
 
 if [[ ${CYDIA+@} ]]; then
 eval "echo 'finish:reload' >&${cydia[0]}"

@@ -55,8 +55,8 @@ static FavoritesManager* S_FavoritesManager = nil;
         
         NSUserDefaults* sDefaults = [NSUserDefaults standardUserDefaults];
         NSArray* sArchivedFavorites = [sDefaults arrayForKey:DEFUALTS_KEY_FAVORITES];
-        //on my iPad, it crashes if !sArchivedFavorites condition is absent
-        if (!sArchivedFavorites
+        //on my iPad, it crashes if sArchivedFavorites condition is absent
+        if (sArchivedFavorites
             && sArchivedFavorites.count > 0)
         {
             NSLog(@"some favorites found!");

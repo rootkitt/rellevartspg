@@ -268,9 +268,14 @@ static MainViewController* S_MainViewController = nil;
 
 - (void) makeToobarEnabled:(BOOL)aEnabled
 {
-    self.mDeviceLocationBarButtonItem.enabled = aEnabled;
-    self.mStartStopBarButtonItem.enabled = aEnabled;
-    self.mTraveledLocationBarButtonItem.enabled = aEnabled;
+    if (!self.mLocationEnabled)
+    {
+        self.mDeviceLocationBarButtonItem.enabled = NO;
+    }
+    else
+    {
+        self.mDeviceLocationBarButtonItem.enabled = aEnabled;
+    }
 }
 
 - (void) refreshTravelingLocationAvailablityStatus

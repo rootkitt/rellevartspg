@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/MainViewController.mm"
-         timestampString = "394889522.129701"
+         timestampString = "395157301.820054"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "587"
-         endingLineNumber = "587"
+         startingLineNumber = "592"
+         endingLineNumber = "592"
          landmarkName = "-showDeviceLocationViewWithAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -112,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/MainViewController.mm"
-         timestampString = "394889522.129701"
+         timestampString = "395157301.820054"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "744"
-         endingLineNumber = "744"
+         startingLineNumber = "749"
+         endingLineNumber = "749"
          landmarkName = "-mapView:viewForAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +151,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/MainViewController.mm"
-         timestampString = "394889522.129701"
+         timestampString = "395157301.820054"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "749"
-         endingLineNumber = "749"
+         startingLineNumber = "754"
+         endingLineNumber = "754"
          landmarkName = "-mapView:viewForAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -195,8 +195,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "158"
          endingLineNumber = "158"
-         landmarkName = "-loadSucessfully:"
-         landmarkType = "5">
+         landmarkName = "@implementation POIsViewController"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -208,7 +208,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "122"
          endingLineNumber = "122"
-         landmarkName = "-loadHotItems"
+         landmarkName = "-viewWillDisappear:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -281,11 +281,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/MainViewController.mm"
-         timestampString = "394889522.129701"
+         timestampString = "395157301.820054"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "487"
-         endingLineNumber = "487"
+         startingLineNumber = "492"
+         endingLineNumber = "492"
          landmarkName = "-startTraveling"
          landmarkType = "5">
       </FileBreakpoint>
@@ -333,11 +333,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/MainViewController.mm"
-         timestampString = "394872808.94409"
+         timestampString = "395157301.820054"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "413"
-         endingLineNumber = "413"
+         startingLineNumber = "418"
+         endingLineNumber = "418"
          landmarkName = "-presentAboutController"
          landmarkType = "5">
       </FileBreakpoint>
@@ -346,12 +346,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "GPSTraveller/MainViewController.mm"
-         timestampString = "394889522.129701"
+         timestampString = "395157301.820054"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "782"
-         endingLineNumber = "782"
+         startingLineNumber = "787"
+         endingLineNumber = "787"
          landmarkName = "-mapView:viewForOverlay:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "GPSTraveller/FavoritesManager.m"
+         timestampString = "395156276.211593"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "52"
+         endingLineNumber = "52"
+         landmarkName = "-readStoredFavoritesIfNeeded"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

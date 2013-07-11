@@ -269,10 +269,10 @@
             
 //            sX = 170;
             sY += sHeight+2;
-            sWidth = 15;
-            sHeight = 15;
+            sWidth = 14;
+            sHeight = 14;
             
-            UIImageView* sImageView = [[UIImageView alloc] initWithFrame:CGRectMake(sX, sY, sWidth, sHeight)];
+            UIImageView* sImageView = [[UIImageView alloc] initWithFrame:CGRectMake(sX, sY+2, 10, 10)];
             sImageView.image = [UIImage imageNamed:@"plane16"];
             [cell.contentView addSubview:sImageView];
             [sImageView release];

@@ -13,24 +13,31 @@
 #define APP_KEY_UMENG   @"50e6decf527015180c000011"
 
 
-#define WEIPHONE
+//#define NO_DISTANCE_LIMIT
+#define TEST
 
-#ifdef DEBUG
-#define CHANNEL_ID     @"test"
-#elif defined(APPSTORE)
-#define CHANNEL_ID @"appstore"
-#elif defined(WEIPHONE)
-#define CHANNEL_ID @"weiphone"
-#elif defined(_178)
+#if defined(APP_STORE_RELEASE)
+#define CHANNEL_ID  @"REAL_APP_STORE"
+#define CHANNEL_ID_INT  1
+#elif defined(WEI_PHONE_RELEASE)
+#define CHANNEL_ID  @"Weiphone"
+#define CHANNEL_ID_INT  2
+#elif defined(_91STORE_RELEASE)
+#define CHANNEL_ID  @"91store"
+#define CHANNEL_ID_INT  3
+#elif defined(TONGBU_RELEASE)
+#define CHANNEL_ID  @"tongbu"
+#define CHANNEL_ID_INT  4
+#elif defined(_178_RELEASE)
 #define CHANNEL_ID @"178"
-#elif defined(ZHUSHOU91)
-#define CHANNEL_ID @"91"
-#elif defined(TONGBU)
-#define CHANNEL_ID @"tongbu"
-#elif defined(COCOACHINA)
-#define CHANNEL_ID @"COCOACHINA"
+#define CHANNEL_ID_INT  5
+#elif (defined(DEBUG) || defined(TEST))
+#define CHANNEL_ID  @"test"
+#define CHANNEL_ID_INT  1000
+#else
+#define CHANNEL_ID  @"Other"
+#define CHANNEL_ID_INT  -1
 #endif
-
 
 
 #define RGB_DIV_255(x)      ((CGFloat)(x/255.0))

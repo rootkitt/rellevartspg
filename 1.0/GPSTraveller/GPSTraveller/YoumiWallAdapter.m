@@ -53,7 +53,7 @@
 
 - (void) getEarnedPoints
 {
-    [self.wall requestEarnedPointsWithTimeInterval:45 repeatCount:3];
+    [self.wall requestEarnedPointsWithTimeInterval:120 repeatCount:3];
     return;
 }
 

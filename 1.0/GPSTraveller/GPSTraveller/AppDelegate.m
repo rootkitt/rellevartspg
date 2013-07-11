@@ -106,13 +106,13 @@
 - (void)pprevealSideViewController:(PPRevealSideViewController *)controller willPushController:(UIViewController *)pushedController
 {
     [self handleOpenClosedEventsAndEnableSubviews:NO];
-//    [[MainViewController shared] makeToobarEnabled:NO];
+    [[MainViewController shared] makeToobarEnabled:NO];
 }
 
 - (void)pprevealSideViewController:(PPRevealSideViewController *)controller didPushController:(UIViewController *)pushedController
 {
     [self handleOpenClosedEventsAndEnableSubviews:NO];
-//    [[MainViewController shared] makeToobarEnabled:NO];
+    [[MainViewController shared] makeToobarEnabled:NO];
 }
 
 
@@ -124,7 +124,7 @@
 - (void)pprevealSideViewController:(PPRevealSideViewController *)controller didPopToController:(UIViewController *)centerController
 {
     [self handleOpenClosedEventsAndEnableSubviews:YES];
-//    [[MainViewController shared] makeToobarEnabled:YES];
+    [[MainViewController shared] makeToobarEnabled:YES];
 
 }
 
