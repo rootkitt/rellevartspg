@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+"CFBundleDisplayName" = "GPS穿越器";
+"CFBundleName" = "GPS穿越器";

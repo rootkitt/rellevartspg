@@ -1,0 +1,367 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1422A0B61709D92A003113BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1422A0B51709D92A003113BF /* Foundation.framework */; };
+		1422A0C11709D92A003113BF /* GPSTravellerTweak.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1422A0C01709D92A003113BF /* GPSTravellerTweak.mm */; };
+		1422A0CC1709D974003113BF /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1422A0CB1709D974003113BF /* libsubstrate.dylib */; };
+		1422A0CF170A86D8003113BF /* MyLocationManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1422A0CD170A86D8003113BF /* MyLocationManagerDelegate.h */; };
+		1422A0D0170A86D8003113BF /* MyLocationManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422A0CE170A86D8003113BF /* MyLocationManagerDelegate.m */; };
+		1422A0D2170A872C003113BF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1422A0D1170A872C003113BF /* CoreLocation.framework */; };
+		1422A0D4170A8754003113BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1422A0D3170A8754003113BF /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1422A0B21709D92A003113BF /* GPSTravellerTweak.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = GPSTravellerTweak.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		1422A0B51709D92A003113BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1422A0BB1709D92A003113BF /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		1422A0BD1709D92A003113BF /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		1422A0BE1709D92A003113BF /* GPSTravellerTweak-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPSTravellerTweak-Prefix.pch"; sourceTree = "<group>"; };
+		1422A0BF1709D92A003113BF /* GPSTravellerTweak.xm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GPSTravellerTweak.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1422A0C01709D92A003113BF /* GPSTravellerTweak.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GPSTravellerTweak.mm; sourceTree = "<group>"; };
+		1422A0C51709D92A003113BF /* GPSTravellerTweak.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = GPSTravellerTweak.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/GPSTravellerTweak.plist; sourceTree = "<group>"; };
+		1422A0CB1709D974003113BF /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = /opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<absolute>"; };
+		1422A0CD170A86D8003113BF /* MyLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyLocationManagerDelegate.h; sourceTree = "<group>"; };
+		1422A0CE170A86D8003113BF /* MyLocationManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyLocationManagerDelegate.m; sourceTree = "<group>"; };
+		1422A0D1170A872C003113BF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1422A0D3170A8754003113BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1422A0AE1709D92A003113BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1422A0D4170A8754003113BF /* UIKit.framework in Frameworks */,
+				1422A0CC1709D974003113BF /* libsubstrate.dylib in Frameworks */,
+				1422A0D2170A872C003113BF /* CoreLocation.framework in Frameworks */,
+				1422A0B61709D92A003113BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1422A0A71709D92A003113BF = {
+			isa = PBXGroup;
+			children = (
+				1422A0B71709D92A003113BF /* GPSTravellerTweak */,
+				1422A0B41709D92A003113BF /* Frameworks */,
+				1422A0B31709D92A003113BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1422A0B31709D92A003113BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0B21709D92A003113BF /* GPSTravellerTweak.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1422A0B41709D92A003113BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0D3170A8754003113BF /* UIKit.framework */,
+				1422A0D1170A872C003113BF /* CoreLocation.framework */,
+				1422A0CB1709D974003113BF /* libsubstrate.dylib */,
+				1422A0B51709D92A003113BF /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1422A0B71709D92A003113BF /* GPSTravellerTweak */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0BF1709D92A003113BF /* GPSTravellerTweak.xm */,
+				1422A0C01709D92A003113BF /* GPSTravellerTweak.mm */,
+				1422A0B81709D92A003113BF /* Package */,
+				1422A0BC1709D92A003113BF /* Supporting Files */,
+				1422A0CD170A86D8003113BF /* MyLocationManagerDelegate.h */,
+				1422A0CE170A86D8003113BF /* MyLocationManagerDelegate.m */,
+			);
+			path = GPSTravellerTweak;
+			sourceTree = "<group>";
+		};
+		1422A0B81709D92A003113BF /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0B91709D92A003113BF /* DEBIAN */,
+				1422A0C21709D92A003113BF /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		1422A0B91709D92A003113BF /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0BB1709D92A003113BF /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		1422A0BC1709D92A003113BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0BD1709D92A003113BF /* PackageVersion.plist */,
+				1422A0BE1709D92A003113BF /* GPSTravellerTweak-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1422A0C21709D92A003113BF /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0C31709D92A003113BF /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		1422A0C31709D92A003113BF /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0C41709D92A003113BF /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		1422A0C41709D92A003113BF /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				1422A0C51709D92A003113BF /* GPSTravellerTweak.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1422A0AF1709D92A003113BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1422A0CF170A86D8003113BF /* MyLocationManagerDelegate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1422A0B11709D92A003113BF /* GPSTravellerTweak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1422A0C81709D92A003113BF /* Build configuration list for PBXNativeTarget "GPSTravellerTweak" */;
+			buildPhases = (
+				1422A0AC1709D92A003113BF /* ShellScript */,
+				1422A0AD1709D92A003113BF /* Sources */,
+				1422A0AE1709D92A003113BF /* Frameworks */,
+				1422A0AF1709D92A003113BF /* Headers */,
+				1422A0B01709D92A003113BF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPSTravellerTweak;
+			productName = GPSTravellerTweak;
+			productReference = 1422A0B21709D92A003113BF /* GPSTravellerTweak.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1422A0A81709D92A003113BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 1422A0AB1709D92A003113BF /* Build configuration list for PBXProject "GPSTravellerTweak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1422A0A71709D92A003113BF;
+			productRefGroup = 1422A0B31709D92A003113BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1422A0B11709D92A003113BF /* GPSTravellerTweak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1422A0AC1709D92A003113BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp-logos";
+		};
+		1422A0B01709D92A003113BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1422A0AD1709D92A003113BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1422A0C11709D92A003113BF /* GPSTravellerTweak.mm in Sources */,
+				1422A0D0170A86D8003113BF /* MyLocationManagerDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1422A0C61709D92A003113BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		1422A0C71709D92A003113BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		1422A0C91709D92A003113BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GPSTravellerTweak/GPSTravellerTweak-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = 192.168.1.100;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		1422A0CA1709D92A003113BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GPSTravellerTweak/GPSTravellerTweak-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = 192.168.1.100;
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1422A0AB1709D92A003113BF /* Build configuration list for PBXProject "GPSTravellerTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1422A0C61709D92A003113BF /* Debug */,
+				1422A0C71709D92A003113BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1422A0C81709D92A003113BF /* Build configuration list for PBXNativeTarget "GPSTravellerTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1422A0C91709D92A003113BF /* Debug */,
+				1422A0CA1709D92A003113BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1422A0A81709D92A003113BF /* Project object */;
+}
